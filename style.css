@@ -1,0 +1,217 @@
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    height: 12vh;
+    background-color: #333;
+    display: flex;
+}
+
+.ticket-container{
+    height: 88vh;    
+    /* min-height: 88vh;  */
+    background-color: whitesmoke;
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.filter-container,
+.add-delete-container{
+    height: 8vh;
+    margin-top: 2vh;
+    margin-left: 8vw;
+    border-radius: 3px;
+    background-color: #444;
+}
+
+.filter-container{
+    width: 18vw;
+    display: flex;
+    border-radius: 15px;
+
+}
+
+.add-delete-container{
+    width: 9vw;
+    display: flex;
+    border-radius: 15px;
+
+}
+
+.filter{
+    height: 100%;
+    width: 25%;
+    display: flex;
+}
+
+.pink-color-btn,
+.blue-color-btn,
+.green-color-btn,
+.yellow-color-btn{
+    display: block;
+    width: 40%;
+    height: 40%;
+    border-radius: 3px;
+    /* margin-left: 30%;
+    margin-top: 30%; */
+    /* margin: calc(8vh*0.3); */
+    /* margin: auto; */
+    margin-top: calc(8vh*0.3);
+    margin-bottom: calc(8vh*0.3);
+    margin-left: calc(4.5vw*0.3);
+    margin-right: calc(4.5vw*0.3);
+    border-radius: 5px;
+}
+
+.pink-color-btn, .modal-pink-filter, .ticket-color-pink{
+    background-color: pink;
+}
+
+.blue-color-btn, .modal-blue-filter, .ticket-color-blue{
+    background-color: blue;
+}
+
+.green-color-btn, .modal-green-filter, .ticket-color-green{
+    background-color: green;
+}
+
+.yellow-color-btn, .modal-yellow-filter, .ticket-color-yellow{
+    background-color: yellow;
+}
+
+.filter:hover{
+    background-color: #222;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.filter.active{
+    background-color: #333;
+    border-radius: 15px;
+}
+
+.add,.delete{
+    height: 100%;
+    width: 50%;
+    
+}
+
+.action-btn{
+    display: block;
+    height: 40%;
+    width: 40%;
+    margin-top: calc(8vh*0.3);
+    margin-bottom: calc(8vh*0.3);
+    margin-left: calc(4.5vw*0.3);
+    margin-right: calc(4.5vw*0.3);    
+    background-color: linen;
+    padding-left: 5%;
+    padding-top: 4%;
+}
+
+.add:hover, .delete:hover{
+    background-color: #222;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+
+.modal{
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px 1px;
+    /* box-shadow: horizontaloffset verticaloffset blurr spread; syntax */
+    height: 18rem;
+    width: 35rem;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    top: 10rem;
+    left: calc((100vw - 35rem)/2);
+}
+
+.task-to-be-added{
+    width: 70%;
+    height: 100%;
+    padding: 3rem;
+    outline: none;
+    overflow: auto;
+}
+
+.modal-priority-list{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: #444;
+    border-radius: 0px 25px 25px 0px;
+
+}
+
+.modal-filter{
+    width: 100%;
+    height: 20%;
+    border-radius: 25px;
+
+}
+
+.modal-filter:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 15px;
+    
+}
+
+.modal-filter.active{
+    border: 3px solid;
+    border-radius: 15px;
+}
+
+.ticket{
+    height: 14rem;
+    width: 20rem;
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px 0.5px;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow-wrap: break-word;
+}
+
+.ticket-color{
+    height: 5%;
+    width: 50%;
+    margin: auto;
+}
+
+.ticket-id{
+    height: 10%;
+    width: 100%;
+    padding: 2%;
+    margin: auto;
+    color: grey;
+}
+
+.task{
+    height: 84%;
+    width: 100%;
+    padding: 2%;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.ticket.active{
+    box-shadow: 0 0 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
